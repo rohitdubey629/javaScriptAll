@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #status {
+        height: 40px;
+        width: 150px;
+    }
+
+    .col {
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div>
+        <input type="text" id="status" />
+    </div>
+    <div style="background: red;" class="col" onclick="setColor(this)"></div>
+    <div style="background: green;" class="col" onclick="setColor(this)"></div>
+    <div style="background: blue;" class="col" onclick="setColor(this)"></div>
+    <input type="button" value="Upload" onclick="uploadStatus()" />
+    <div id="post"></div>
+
+</body>
+<script>
+    let containerColor = null;
+    function setColor(ref) {
+        containerColor = ref.style.background;
+    }
+    function uploadStatus() {
+        const post = document.getElementById("post");
+        const status = document.getElementById("status");
+        if (containerColor == null) {
+            return;
+        }
+        post.style.height = "200px";
+        post.style.width = "200px";
+        post.style.margin = "auto";
+        post.style.background = containerColor;
+        post.innerHTML = status.value;
+
+    }
+</script>
+
+</html>
