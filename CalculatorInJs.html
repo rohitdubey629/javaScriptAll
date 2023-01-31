@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title> </title>
+        <script>
+          function calc(sym){
+          a = parseFloat(t1.value);
+          b = parseFloat(t2.value);
+          if(sym=="+")
+             c = a+b;
+          else if(sym=="-")
+             c = a-b;
+          else if(sym=="*")
+             c = a*b;
+          else if(sym=="/")
+             c = a/b;
+          t3.value=c;
+}
+        </script>
+    </head>
+    <body>
+        No1: <input type="text"name="t1"id="t1"/><br/>
+        No2: <input type="text"name="t2"id="t2"/><br/>
+        Res: <input type="text"nmae="t3"id="t3"/><br/>
+             <input type="button"value="+"onClick="calc('+');">
+             <input type="button"value="-"onClick="calc('-');">
+             <input type="button"value="*"onClick="calc('*');">
+             <input type="button"value="/"onClick="calc('/');"> 
+    </body>
+</html>

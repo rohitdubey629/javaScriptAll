@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digital-clock</title>
+    <style>
+        #digitalclock1{
+                height: 75px;
+                width: 100%;
+                margin: 10px;
+                text-align: center;
+                font-size: 3rem;
+                border: 2px solid black;
+            }
+    </style>
+</head>
+<body>
+    <div id="digitalclock1"> </div>
+</body>
+<script>
+    function digitalclock(){
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var second = date.getSecond();
+        var result = hours +" : "+minutes+" : "+second;
+        var element = document.getElementById("digitalclock1");
+        element.innerHTML = result;
+    }
+    setInterval(function(){
+                digitalclock();
+            }, 1 * 1000);
+</script>
+</html>

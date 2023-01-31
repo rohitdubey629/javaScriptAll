@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript</title>
+    <style>
+        .container {
+            height: 100%;
+            width: 700px;
+            margin: 3% auto;
+            border: 5px solid #00f;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 30px;
+            font-family: monospace;
+            border: 1px solid;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .sub-container {
+            border: 1px solid;
+            padding: 10px;
+        }
+
+        .sub-container>div {
+            display: flex;
+            margin: 15px 0;
+        }
+
+        #result {
+            height: 32px;
+            width: 545px;
+            margin-left: 10px;
+            padding: 0 17px;
+            font-size: 25px;
+            color: #00f;
+            background: yellow;
+            text-align: right;
+        }
+
+        button#cancelBtn {
+            height: 36px;
+            width: 45px;
+            margin: 0 10px;
+        }
+
+        button {
+            height: 36px;
+            width: 145px;
+            margin: 0 10px;
+        }
+    </style>
+    <script>
+        function buttonClick(val) {
+            var getResultElement = document.getElementById("result");
+            var resultValue = getResultElement.value;  // 1.5 + 1.5
+
+            if (val === 'c') {
+                getResultElement.value = '';
+                return;
+            }
+
+            if (val === '=') {
+                var output = eval(resultValue);
+                getResultElement.value = output;
+                return;
+            }
+
+            if (val !== 'c' && val !== '=') {
+                resultValue = resultValue + val;
+                getResultElement.value = resultValue;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">Calculator</div>
+        <div class="sub-container">
+            <div class="row-one">
+                <div class="result">
+                    <input type="text" name="result" id="result" />
+                </div>
+                <div class="cancel">
+                    <button name="cancelBtn" id="cancelBtn" onclick="buttonClick('c');">C</button>
+                </div>
+            </div>
+
+            <div class="row-two">
+                <div>
+                    <button id="one" onclick="buttonClick('1');">1</button>
+                </div>
+                <div>
+                    <button id="two" onclick="buttonClick('2');">2</button>
+                </div>
+                <div>
+                    <button id="three" onclick="buttonClick('3');">3</button>
+                </div>
+                <div>
+                    <button id="divid" onclick="buttonClick('/');">/</button>
+                </div>
+            </div>
+
+            <div class="row-three">
+                <div>
+                    <button id="four" onclick="buttonClick('4');">4</button>
+                </div>
+                <div>
+                    <button id="five" onclick="buttonClick('5');">5</button>
+                </div>
+                <div>
+                    <button id="six" onclick="buttonClick('6');">6</button>
+                </div>
+                <div>
+                    <button id="sub" onclick="buttonClick('-');">-</button>
+                </div>
+            </div>
+
+            <div class="row-four">
+                <div>
+                    <button id="seven" onclick="buttonClick('7');">7</button>
+                </div>
+                <div>
+                    <button id="eight" onclick="buttonClick('8');">8</button>
+                </div>
+                <div>
+                    <button id="nine" onclick="buttonClick('9');">9</button>
+                </div>
+                <div>
+                    <button id="add" onclick="buttonClick('+');">+</button>
+                </div>
+            </div>
+
+            <div class="row-five">
+                <div>
+                    <button id="dot" onclick="buttonClick('.');">.</button>
+                </div>
+                <div>
+                    <button id="zero" onclick="buttonClick('0');">0</button>
+                </div>
+                <div>
+                    <button id="equal" onclick="buttonClick('=');">=</button>
+                </div>
+                <div>
+                    <button id="multi" onclick="buttonClick('');"></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

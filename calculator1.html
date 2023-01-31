@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Calculator</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url(img7.jpg);
+
+        }
+
+        .conteiner {
+            margin: auto;
+            margin-top: 60px;
+            height: 100%;
+            width: 700px;
+            border: 2px solid black;
+            background-image: url(img9.jpg);
+
+        }
+
+        .header {
+            border: 2px solid black;
+            margin: 10px;
+            font-size: 40px;
+            text-align: center;
+            transition: 5s;
+        }
+
+        .sub-conteiner {
+            border: 2px solid black;
+            margin: 10px;
+            background-image: url(img10.jpg);
+
+        }
+
+        .sub-conteiner>div {
+            display: flex;
+        }
+
+        #result {
+            background-image: url(img7.jpg);
+            font-size: 25px;
+            margin: 10px;
+            height: 40px;
+            width: 550px;
+            color:red;
+        }
+
+        button#clearbtn {
+            margin-top: 10px;
+            height: 40px;
+            width: 85px;
+        }
+
+        button {
+            /* background-image: url(img7.jpg); */
+            background: transparent;
+            height: 40px;
+            width: 149px;
+            margin: 10px;
+            font-size: 25px;
+        }
+     button:hover{
+        background-color: rgba(200, 255, 0,0.3);
+        
+        font-size: 40px;
+     }
+     .header:hover{
+        font-size: 100px;
+
+     }
+    </style>
+</head>
+
+<body>
+    <div class="conteiner">
+        <div class="header">Calculator</div>
+        <div class="sub-conteiner">
+            <div class="row-one">
+                <div class="result">
+                    <input type="text" name="result" id="result">
+                </div>
+                <div class="clear">
+                    <button name="clearbtn" id="clearbtn" onclick="buttonClick('c');">C</button>
+                </div>
+            </div>
+            <div class="row-two">
+                <div>
+                    <button id="one" onclick="buttonClick('1');">1</button>
+                </div>
+                <div>
+                    <button id="two" onclick="buttonClick('2');">2</button>
+                </div>
+                <div>
+                    <button id="three" onclick="buttonClick('3');">3</button>
+                </div>
+                <div>
+                    <button id="four" onclick="buttonClick('/');">/</button>
+                </div>
+            </div>
+            <div class="row-three">
+                <div>
+                    <button id="five" onclick="buttonClick('4');">4</button>
+                </div>
+                <div>
+                    <button id="six" onclick="buttonClick('5');">5</button>
+                </div>
+                <div>
+                    <button id="seven" onclick="buttonClick('6');">6</button>
+                </div>
+                <div>
+                    <button id="eight" onclick="buttonClick('-');">-</button>
+                </div>
+            </div>
+            <div class="row-four">
+                <div>
+                    <button id="five" onclick="buttonClick('7');">7</button>
+                </div>
+                <div>
+                    <button id="six" onclick="buttonClick('8');">8</button>
+                </div>
+                <div>
+                    <button id="seven" onclick="buttonClick('9');">9</button>
+                </div>
+                <div>
+                    <button id="eight" onclick="buttonClick('+');">+</button>
+                </div>
+            </div>
+            <div class="row-five">
+                <div>
+                    <button id="five" onclick="buttonClick('.');">.</button>
+                </div>
+                <div>
+                    <button id="six" onclick="buttonClick('0');">0</button>
+                </div>
+                <div id="equal">
+                    <button id="seven" onclick="buttonClick('=');">=</button>
+                </div>
+                <div>
+                    <button name="clear" id="clear" onclick="buttonClick('*');"><small> * </small></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function buttonClick(val){
+                var getResultElement = document.getElementById("result");
+                var resultValue = getResultElement.value; 
+
+   
+                if(val === 'c'){
+                    getResultElement.value = '';
+                    return;
+                }
+                
+                if(val === '='){
+                    var output = eval(resultValue);
+                    getResultElement.value = output;
+                    return;
+                }
+
+                if(val !== 'c' && val !== '='){
+                    resultValue = resultValue + val;
+                    getResultElement.value = resultValue;
+                    
+                }
+                
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get Time</title>
+        <style>
+            .container {
+                margin: 7%;
+            }
+            .heading {
+                font-size: 2rem;
+                font-family: fantasy;
+                font-weight: bolder;
+            }
+            .digital-clock {
+                height: 75px;
+                width: 100%;
+                margin: 10px;
+                text-align: center;
+                font-size: 3rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <fieldset>
+                <legend class="heading"> Digital Clock !</legend>
+                <div class="digital-clock" id="digitalClock1"> </div>
+            </fieldset>
+        </div>
+        <script>
+            function digitalClock(){
+                var date = new Date();
+                var hours = date.getHours();
+                var minutes = date.getMinutes();
+                var second = date.getSeconds();
+                var result = hours +" : "+minutes+" : "+second; // `${hours} : ${minutes} : ${second}`;
+                var element = document.getElementById("digitalClock1");
+                element.innerHTML = result;
+            }
+
+            function changeBackgroundColor(){
+                var date = new Date();
+                var hours = date.getHours();
+                var minutes = date.getMinutes();
+                var second = date.getSeconds();
+                var color = `${hours}${minutes}${second}`;
+                var element = document.getElementById("digitalClock1");
+                if(color.length === 6){
+                    element.style.backgroundColor = `#${color}`;
+                }
+            }
+
+            setInterval(function(){
+                digitalClock();
+            }, 1 * 1000);
+
+            setInterval(function(){
+                changeBackgroundColor();
+            }, 5 * 1000);
+
+
+        </script>
+    </body>
+</html>

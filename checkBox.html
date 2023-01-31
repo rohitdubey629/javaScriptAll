@@ -1,0 +1,68 @@
+<!-- 29/10/2022 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Box</title>
+</head>
+
+<body>
+    <input type="checkbox" onclick="markAddList(this)" id="check" /><label for="check" id="change">Checked</label>
+    <div class="appContainer">
+        <input type="checkbox" name="facebook" id="face" class="app" /><label for="face">Facebook</label>
+    </div>
+    <div class="appContainer">
+        <input type="checkbox" name="youtube" id="youTube" class="app" /><label for="youTube">YouTube</label>
+    </div>
+    <div class="appContainer">
+        <input type="checkbox" name="amazon" id="amazon" class="app" /><label for="amazon">Amazon</label>
+    </div>
+    <input type="button" value="delete" onclick="deleteApp()">
+</body>
+
+<script>
+    const appList = document.getElementsByClassName("app");
+    const appContainerList = document.getElementsByClassName("appContainer");
+
+
+
+    // checked and UnChecked
+
+    function markAddList(ref) {
+        // let a = document.getElementById("change");
+        // console.log("hii" + a);
+
+        let a = ref.checked;     // true and false
+        if (a) {
+            document.getElementById("change").innerHTML = "<font color=green> UnChecked</font>";
+        } else {
+            document.getElementById("change").innerHTML = "Checked";
+
+        }
+        console.log(a);
+
+        // var span = document.getElementById('change');
+        // span.innerText = span.textContent = 'UnChecked';
+
+
+        for (let app of appList) {
+            app.checked = ref.checked;
+        }
+    }
+
+    // hide div appContainer 
+
+    function deleteApp() {
+        for (let index = 0; index < appList.length; index++) {
+            if (appList[index].checked) {
+                appContainerList[index].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</html>

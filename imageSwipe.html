@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>image Switch</title>
+  <style>
+    * {
+      margin: 0%;
+      padding: 0%;
+      box-sizing: border-box;
+    }
+
+    div {
+      border: 2px solid black;
+      padding: 20px;
+      margin: 10px;
+      /* background-image: url(image/img8.jpg); */
+    }
+
+    .box {
+      display: inline-block;
+      height: 200px;
+      width: 200px;
+      margin-left: 200px;
+      padding: 0%;
+
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    .button {
+      border: none;
+    }
+
+    .button input {
+      margin-left: 40%;
+      height: 50px;
+      width: 100px;
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="main-box">
+      <div class="box1 box">
+        <img src="image/img10.jpg" alt="" id="img1" />
+      </div>
+      <div class="box2 box">
+        <img src="image/img11.jpg" alt="" id="img2" />
+      </div>
+      <div class="button">
+        <input type="button" value="switch" onclick="switchImg();">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchImg() {
+      /*
+       // Method 1
+        let a = document.getElementById("img1").src;
+        let b = document.getElementById("img2").src;
+         
+        document.getElementById("img1").src=b;
+        document.getElementById("img2").src=a;
+      */
+
+
+      // Method 2
+      let a = document.getElementById("img1");
+      let b = document.getElementById("img2");
+
+      let imga = a.src;
+      let imgb = b.src;
+      a.src = imgb;
+      b.src = imga;
+    }
+  </script>
+</body>
+
+</html>

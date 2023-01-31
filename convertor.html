@@ -1,0 +1,22 @@
+<html>
+   <head>
+      <title> creat currency convertor</title>
+   <script>
+    function convertor(){
+      inr = parseInt(t1.value);
+      t2.value=inr/72;
+      t3.value=inr/45;
+      t4.value=inr/33;
+}
+   </script>
+   </head>
+   <body>
+       <center> curency convertor</center>
+      <center>
+       INR <input type="text"id="t1"name="t1"onblur="convertor();"/><br/>
+       Dollar <input type="text"id="t2"name="t2"/><br/>
+       Yen <input type="text" id="t3" name="t3"/><br/>
+       Ruble <input type="text" id="t4" name="t4"/><br/>
+      </center>
+   </body>
+</html>

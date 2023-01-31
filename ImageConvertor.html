@@ -1,0 +1,17 @@
+<html>
+   <head>
+      <title> Image convertor in js </title>
+   </head>
+   <body>
+      <img src="image/img7.jpg"height="400px"width="400px"id="img1"name="img1"/>
+      <img src="image/img9.jpg"height="400px"width="400px"id="img2"name="img2"/>
+      <button onClick="change()">convert</button>
+   </body>
+   <script>
+      function change(){
+         var t = img1.src;
+         img1.src = img2.src;
+         img2.src = t;
+} 
+   </script>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="click" class="btn1" />
+    <input type="button" value="click" class="btn1" />
+    <input type="button" value="click" class="btn1" />
+    <input type="button" value="click" class="btn1" />
+    <br>
+    <!-- <button>Click me</button> -->
+    <!-- <p>No handler here.</p> -->
+
+    <!-- <button>Act-once button</button> -->
+    <!-- <button>Click me any way you want</button> -->
+
+    <!-- <p>A paragraph with a <button>button</button>.</p> -->
+
+    <!-- <button>A</button>
+    <button>B</button>
+    <button>C</button> -->
+
+    <!-- <a href="https://developer.mozilla.org/">MDN</a> -->
+
+    <!-- <p>This page turns violet when you hold the V key.</p> -->
+
+    <!-- <p>Press Control-Space to continue.</p> -->
+
+    <!-- <input type="text" id="message"> -->
+
+
+</body>
+<script>
+    // const btn1 = document.getElementsByClassName("btn1");
+    const btn1 = document.querySelectorAll(".btn1");
+
+    for (const bt of btn1) {
+        bt.addEventListener("click", function () {
+            alert("called");
+        })
+    }
+
+    // let button = document.querySelector("button");
+    // button.addEventListener("click", () => {
+    //     console.log("Button clicked.");
+    // });
+
+    // let button1 = document.querySelector("button");
+    // function once() {
+    //     console.log("Done.");
+    //     button1.removeEventListener("click", once);
+    // }
+    // button1.addEventListener("click", once);
+
+
+    // let button = document.querySelector("button");
+    // button.addEventListener("mousedown", event => {
+    //     if (event.button == 0) {
+    //         console.log("Left button");
+    //     } else if (event.button == 1) {
+    //         console.log("Middle button");
+    //     } else if (event.button == 2) {
+    //         console.log("Right button");
+    //     }
+    // });
+
+
+
+
+
+    // let para = document.querySelector("p");
+    // let button = document.querySelector("button");
+    // para.addEventListener("mousedown", () => {
+    //     console.log("Handler for paragraph.");
+    // });
+    // button.addEventListener("mousedown", event => {
+    //     console.log("Handler for button.");
+    //     if (event.button == 2) event.stopPropagation();
+    // });
+
+
+
+    // document.body.addEventListener("click", event => {
+    //     if (event.target.nodeName == "BUTTON") {
+    //         console.log("Clicked", event.target.textContent);
+    //     }
+    // });
+
+
+    //     let link = document.querySelector("a");
+    //   link.addEventListener("click", event => {
+    //     console.log("Nope.");
+    //     event.preventDefault();
+    //   });
+
+
+    // window.addEventListener("keydown", event => {
+    //     if (event.key == "v") {
+    //         document.body.style.background = "violet";
+    //     }
+    // });
+    // window.addEventListener("keyup", event => {
+    //     if (event.key == "v") {
+    //         document.body.style.background = "";
+    //     }
+    // });
+
+
+    // window.addEventListener("keydown", event => {
+    //     if (event.key == " " && event.ctrlKey) {
+    //         console.log("Continuing!");
+    //     }
+    // });
+
+
+
+    // let ticks = 0;
+    // let clock = setInterval(() => {
+    //     console.log("tick", ticks++);
+    //     if (ticks == 10) {
+    //         clearInterval(clock);
+    //         console.log("stop.");
+    //     }
+    // }, 200);
+
+
+
+    // let textBox = document.getElementById('message');
+    // textBox.addEventListener('keydown', (event) => {
+    //     console.log(`key=${event.key},code=${event.code}`);
+
+    // });
+</script>
+
+</html>

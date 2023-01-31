@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>  
+    
+        // note  interview perpose  code
+
+        // var st1 = "amit";
+        // var st2 = "iamt";
+        // var s1 = st1.split('').sort().join();
+        // var s2 = st2.split('').sort().join();
+        //  if(s1==s2){
+        //     console.log("Equal");
+        //  }else{
+        //     console.log("Not Equal");
+        //  }
+
+        // var n = "amit";
+        // console.log(n);
+        // var x = n.split();
+        //    console.log(x);
+        //    var y = x.join();
+        //    console.log(y);
+
+         //split()  convert string to array
+              // string ="amit"   covert array = [a,m,i,t]
+         //sort()   a to z serial voise sort karna
+              //  sort = "amit"   =  aimt
+         //join()  conver array to string
+              //   join() = array['a,m,i,t'] convert  string= "amit" 
+
+
+        //       // push()   and   pop()
+
+        // var a = [10,20,30];
+        //  a.push(40);  //add [40] in last index        // push  method use in array and add element in last index
+        //   console.log(a);// output [10,20,30,40]
+        //   a.pop();  //remove [40] in last index      // pop  method use in array and remove element in last index 
+        //   console.log(a);  //output [10,20,30]
+           
+        //     // shift()   and   unshift()
+
+        //   var b = [10,20,30];
+        //   b.unshift(100);  //add in first index [100]   //unshift method use array in add first index 
+        //    console.log(b);  // output [100,10,20,30]
+        //   b.shift(); // remove in first index [10]   //shift method use array in remove first element 
+        //   console.log(b);  // output [20,30]
+    
+           // indexOf()  and  lastIndexOf()  
+
+           var c = [10,20,30,10];
+             var x=c.indexOf(10);  // return index position check start index  
+             console.log(x); // output [0] 
+        //console.log(c.indexOf(10));  
+        var x=c.lastIndexOf(10);  // return index position check last index  
+             console.log(x); // output [3] 
+        //console.log(c.lastIndexOf(10));  
+
+         // reverse()   and   sort()
+
+        //  var d = [20,10,30,40];
+        //      var y = d.reverse();  // reverse element in array  
+        //      console.log(y); // output [40,30,10,20] 
+        // //console.log(d.reverse());  
+        // var y = d.sort();  // sort serise element in array 
+        //      console.log(y); // output [10,20,30,40] 
+        // //console.log(d.sort()); 
+
+
+        // concat()   and   slice()
+
+    //     var a = [10,20,30,40];
+    //     var b = [50,60];
+
+    //     var x = a.concat(b);  //[10,20,30,40,50,60]
+    //  // var x = b.concat(a);  //[50,60,10,20,30,40]
+    //     console.log(x);  // [10,20,30,40,50,60]
+    
+    
+        // slice()     and    splice()
+  
+     //    var a = [10,20,30,40,50,60];
+     //   var x = a.slice(1,4);
+     //    console.log(a);
+     //    console.log(x);
+
+     var a = [10,20,30,40,50,60]
+       
+     var b = a.splice(2,2,100,200); //[100,200] //add element by select index and delete element by select count
+                           //  select 2 delete element[30,40]
+          console.log("a "+a)    // output[10,20,100,200,50,60] 
+         console.log("b "+b);   // output [30,40] deleted element
+
+
+         
+    </script>
+</body>
+</html>
