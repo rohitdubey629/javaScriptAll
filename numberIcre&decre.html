@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>image Swipe</title>
+</head>
+
+<body>
+  Enter number
+  <input type="text" name="" id="t1" /><br>
+  <input type="button" value="multi" id="t2" onclick="mul()" />
+  <script>
+
+    let a = parseInt(t1.value);
+
+    function mul() {
+
+      // t1.value = a +10;
+
+      if (a >= 10 && a < 100) {
+        a = a + 10;
+        t1.value = a;
+      }
+    }
+  </script>
+</body>
+
+</html>

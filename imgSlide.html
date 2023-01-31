@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slide</title>
+</head>
+<style>
+    img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .img {
+        height: 200px;
+        width: 200px;
+        border: 1px solid;
+        overflow: hidden;
+        scroll-behavior: auto;
+    }
+
+    #btn2 {
+        margin-left: 140px;
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+
+    <div class="main">
+        <div class="img">
+            <img src="image/img10.jpg" alt="" id="img1" />
+
+        </div>
+        <button id="btn" onclick="pre()">
+        </button>
+        <button id="btn2" onclick="next()">>></button>
+    </div>
+
+
+    <script>
+        const imag = ['image/img8.jpg', 'image/img9.jpg', 'image/img10.jpg', 'image/img11.jpg', 'image/img12.jpg'];
+
+        const firstImage = 0;
+        const lastImage = imag.length - 1;
+        let currentImage = 0;
+
+        const button1 = document.getElementById("btn");
+        const button2 = document.getElementById("btn2");
+        const imageTag = document.getElementById("img1");
+
+        function next() {
+            currentImage++;
+            if (currentImage >= lastImage) {
+                currentImage = 4;
+            }
+            imageTag.src = imag[currentImage];
+            imageTag.getElementById("main").innerHTML = (currentImage + 1) + '/5';
+        }
+
+
+        function pre() {
+            currentImage--;
+            if (currentImage <= firstImage) {
+                currentImage = 0;
+            }
+            imageTag.src = imag[currentImage];
+            imageTag.getElementById("main").innerHTML = (currentImage + 1) + '/5';
+        }
+    </script>
+</body>
+
+</html>

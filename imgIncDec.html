@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image Swipe</title>
+
+
+</head>
+
+<body>
+    <center>
+        <img src="image/img10.jpg" alt="" width="100" height="100" onclick="size()" id="t1" />
+    </center>
+    <script>
+        let flag = false;
+        // let num = 10;
+        let width = 100;
+        let height = 100;
+
+        function size() {
+            let img = document.getElementById("t1");
+
+            if (width === 500) {
+                flag = true;
+            } else if (width === 100) {
+                flag = false;
+            }
+            if (!flag) {
+
+                width = width + 100;
+                height = height + 100;
+                img.style.width = width + "px";
+                img.style.height = height + "px";
+
+                // console.log(width);
+                // console.log(height);
+
+            } else if (flag) {
+                width = width - 100;
+                height = height - 100;
+                img.style.width = width + "px";
+                img.style.height = height + "px";
+
+                // console.log(width);
+                // console.log(height);
+
+            }
+
+
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

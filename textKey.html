@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text {
+            border: 2px solid black;
+            font-size: 20px;
+            padding-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text">Press me and show key</div>
+    <!-- <div id="myDiv" tabindex="0">
+        Press me and start typing
+    </div> -->
+</body>
+<script>
+    const text = document.querySelector(".text");
+    addEventListener("keyup", function (e) {
+        text.innerHTML = e.key;
+        console.log(e);
+    });
+
+    // text.addEventListener("keypress", function (e) {
+    //     console.log(e)
+    //     KeyboardEvent
+    // });
+
+    // text.addEventListener("keyPress", myEventHandler);
+
+    // function myEventHandler(event) {
+    //     console.log(event);
+    // }
+
+    // document.querySelector('#myDiv').addEventListener('keyup', function (e) {
+    //     console.log(e.key)
+    //     document.querySelector('#myDiv').innerHTML = e.key;
+    // })
+</script>
+
+</html

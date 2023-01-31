@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swipe two Number</title>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <label for="">First Number</label>
+            <input type="text" id="t1" />
+        </div>
+        <div>
+            <label for="">Second Number</label>
+            <input type="text" id="t2" />
+        </div>
+        <div>
+            <input type="button" value="swipe" id="t3" onclick="swipe();" />
+        </div>
+    </div>
+
+    <script>
+        function swipe() {
+            let input1 = document.getElementById("t1").value;
+            let input2 = document.getElementById("t2").value;
+            //console.log(input1);
+            // console.log(`${input1} :${input2}`);
+            // let sum = Number(input1) + Number(input2);
+            // console.log(sum);
+
+            // let inputInt1 = parseInt(input1);
+            // let inputInt2 = parseInt(input2);
+
+            let inputInt1 = Number(input1);
+            let inputInt2 = Number(input2);
+
+            document.getElementById("t1").value = inputInt2;
+            document.getElementById("t2").value = inputInt1;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image change</title>
+</head>
+
+<body>
+    <center>
+        <input type="button" value="<<" onclick="preimg()" />
+        <img src="image/img10.jpg" width="200" height="200" alt="" id="imgContainer" />
+        <input type="button" value=">>" onclick="nextimg()" />
+    </center>
+</body>
+<script>
+    const image = ['image/img8.jpg', 'image/img9.jpg', 'image/img10.jpg', 'image/img11.jpg', 'image/img12.jpg'];
+
+    let imgNo = 0;
+
+    function nextimg() {
+        imgNo++;
+        if (imgNo === 4) {
+            imgNo = 0;
+        }
+        imgContainer.src = image[imgNo];
+    }
+    function preimg() {
+
+        imgNo--;
+        if (imgNo === -1) {
+            imgNo = 3;
+        }
+        imgContainer.src = image[imgNo];
+    }
+</script>
+
+</html>

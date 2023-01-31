@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = [10,20,30];
+         console.log(a)
+        //for loop
+        console.log("for loop")
+
+        for(var i=0;i<a.length;i++){
+            console.log(a[i]);
+        }
+        // for in
+        console.log("for in [index and Element]")
+        for(var index in a){
+            console.log(index,a[index]);
+        }
+
+        //for Each
+        console.log("for Each")
+        var a = [10,20,30];
+        a.forEach(function(element,index){
+            console.log(element,index);
+        })
+
+        //for of
+        console.log("for of")
+        for(var element of a){
+            console.log(element);
+        }
+    </script>
+</body>
+</html>

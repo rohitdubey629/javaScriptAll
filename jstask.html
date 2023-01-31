@@ -1,0 +1,122 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<!-- <script>
+    var num = parseInt(prompt("Enter the number"));
+    var r,rev=0,sq,ree=0,g;
+    sq = num*num;
+    while(num>0){
+    
+        g = num%10;
+        ree = ree*10+g;
+        num = parseInt(num/10);
+        
+        r = sq % 10;
+        rev = rev * 10 + r;
+        sq = parseInt(sq/10);
+
+     
+    }
+    if(ree===rev){
+         console.log("valid");
+        
+        }else{
+            console.log("invalid");
+        }
+</script> -->
+
+<!-- Note  :  Only 1 is right number other voise wrong number
+Ex : input 123     1+2+3   =  6  wrong number 
+     input 73      7+3  + 10   1+0   =   1   right number  
+
+<script>
+    var num = parseInt(prompt("Enter the number"));
+    var r, rev = 0, count = 0;
+
+    while (true) {
+        while (num > 0) {
+
+            r = num % 10;
+            rev = rev + r;
+            num = parseInt(num / 10);
+        }
+        num = rev;
+        count=0;
+        while (rev > 0) {
+            count++;
+            rev = parseInt(rev / 10);
+
+        }
+        if (count == 1){
+            break;
+        }
+    }
+    if(num==1)
+    console.log("right number");
+    else
+    console.log("wrong number");
+</script> -->
+
+<!-- <script>     
+    var num = parseInt(prompt("Enter the number"));
+    var r,sum=0,t,f=1;
+    t = num;
+    while(num>0){
+        r = num%10;
+        f=1;
+        for(var i=1;i<=r;i++){
+
+            f = f *i;
+        }
+        sum = sum + f;
+        num = parseInt(num/10);
+    }
+ 
+ if(sum===t){
+
+    console.log("perfect number");
+ }else{
+    console.log("not perfect number");
+ }
+</script> -->
+
+
+
+ Input    =   1      2       3       4        5         6
+Output    =   1      5       9       13       17        21
+
+
+<script>
+    var num = parseInt(prompt("Enter the number"));
+    var t=1,i=1;
+    while(i<=num){
+      if(num===i){
+        console.log(t);
+      }
+      i++;
+      t=i+(3*(i-1));
+    }
+</script>
+
+
+<!-- 
+<script>
+    var num = parseInt(prompt("Enter the number"));
+
+</script> -->
+
+
+
+
+
+</html>

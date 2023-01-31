@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+<script>
+    var prise, qunt, total, dis;
+    function calk() {
+
+        prise = parseInt(p.value);
+        qunt = parseInt(q.value);
+        if (type.value == "0" && type1.value == "0") {
+            alert("not allaud");
+        } else {
+            total = prise * qunt;
+            to.value = total;
+            var gst = qunt * prise + (qunt * prise / 10);
+            if (type1.value == "1" && type.value == "1")
+                dis = total + gst - (total + gst * 10 / 100);
+            else if (type1.value == "2" && type.value == "2")
+                dis = total + gst - (total + gst * 18 / 100);
+            amt.value = dis;
+        }
+    }
+
+</script>
+
+<body>
+    <table border="10px" align="center">
+        <tr>
+            <th style="background-color:rgb(192, 229, 255)">
+                <h3 style="background-color:rgb(181, 51, 51);">Receipt Generatoin</h3>
+                Product:-<select name="type" id="type" onchange="calk()">
+                    <option value="0">Plz Select--</option>
+                    <option value="1">Swoose</option>
+                    <option value="1">T-shert</option>
+                    <option value="1">shert</option>
+                    <option value="2">Fan</option>
+                    <option value="2">Adoptor</option>
+                    <option value="2">Ac</option>
+                </select><br><br>
+                Type:-<select id="type1" name="type1" onchange="calk()">
+                    <option value="0">Plz Select--</option>
+                    <option value="1">Daly</option>
+                    <option value="2">Electronic</option>
+                </select><br><br>
+                Prise:-<input type="text" id="p" name="p"><br><br>
+                Quantity:-<input type="text" id="q" name="q"><br><br>
+                Totle:-<input type="text" id="to" name="to"><br><br>
+                GST-Prise:-<input type="text" id="g" name="g" value="10%" readonly><br><br>
+                Discount-Prise:-<input type="text" id="d" name="d" value="Daly-10%,Electronic-18%" readonly /><br><br>
+                Paid-Amount:-<input type="text" id="amt" name="amt"><br><br>
+                <input type="button" value="Click-on" onClick="calk()">
+            </th>
+        </tr>
+    </table>
+</body>
+
+</html>

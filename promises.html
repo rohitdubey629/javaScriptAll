@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1 promise example
+
+    // const pobj1 = new Promise((resolve, rejects) => {
+    //   const arr = [1, 2, 3, 4, 5];
+    //   resolve(arr);
+    //   rejects("somthing went wrong");
+    // });
+
+    // const getBiodata = (indexdata) => {
+    //   return new Promise((resolve, rejects) => {
+    //     setTimeout((indexdata) => {
+    //       const biodata = {
+    //         name: "rohit",
+    //         age: 24
+    //       }
+    //       resolve(`my rol no is ${indexdata} my name is ${biodata.name} and i am  ${biodata.age} year old`);
+
+    //     }, 2000, indexdata)
+    //   })
+    // }
+
+    // pobj1
+    //   .then((arr) => {
+    //     console.log(arr);
+    //     // 1 step
+    //     // getBiodata(arr[1]).then((arrIndex) => {
+    //     //   console.log(arrIndex);
+    //     // })
+    //     return getBiodata(arr[1]);
+    //   })
+    //   // 2 step
+    //   .then((arrIndex) => {
+    //     console.log(arrIndex);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+
+
+
+    // 2 promise example
+
+    // async function rohit() {
+    //   let delhiWeather = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       resolve("21 deg");
+    //     }, 2000)
+    //   })
+    //   let allahabadWeather = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       resolve("25 deg");
+    //     }, 7000)
+    //   })
+    //   delhiWeather.then(alert);
+    //   allahabadWeather.then(alert);
+    // }
+    // rohit();
+
+    // 3 promise example
+
+    // async function rohit() {
+    //   let delhiWeather = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       resolve("21 deg");
+    //     }, 2000)
+    //   })
+    //   let allahabadWeather = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       resolve("25 deg");
+    //     }, 7000)
+    //   })
+    //   console.log("Fetching delhi weather please wait...");
+    //   let delhiW = await delhiWeather
+    //   console.log("Fetched delhi weather " + delhiW);
+
+    //   console.log("Fetching allahabad weather please wait...");
+    //   let allahabadW = await allahabadWeather
+    //   console.log("Fetched allahabad weather " + allahabadW);
+    //   return [delhiW, allahabadW];
+    // }
+    // let a = rohit();
+    // a.then((solve) => {
+    //   console.log(solve);
+    // })
+
+    // 4 promise example
+
+    async function rohit() {
+      let delhiWeather = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("21 deg");
+        }, 2000)
+      })
+      let allahabadWeather = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("25 deg");
+        }, 7000)
+      })
+      console.log("Fetching delhi weather please wait...");
+      let delhiW = await delhiWeather
+      console.log("Fetched delhi weather " + delhiW);
+
+      console.log("Fetching allahabad weather please wait...");
+      let allahabadW = await allahabadWeather
+      console.log("Fetched allahabad weather " + allahabadW);
+      return [delhiW, allahabadW];
+    }
+
+    const dubey = async () => {
+      console.log("hi iam dubey i am waiting");
+    }
+    const main1 = async () => {
+
+      let a = await rohit();
+      let b = await dubey();
+    }
+  </script>
+</body>
+
+</html>

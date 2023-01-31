@@ -1,0 +1,176 @@
+<!-- Q(1): even odd-->
+<!-- <script>
+    var num = parseInt(prompt("Enter the number and check odd even"));
+
+    if (num % 2 == 0) {
+        console.log("number is " + num + " Even");
+    } else {
+        console.log("number is " + num + " Odd");
+    }
+</script>  -->
+
+
+<!-- Q(2): Positive Nigetive -->
+<!-- <script>
+    var num = parseInt(prompt("Enter the number and check Positive Nigetive"));
+
+    if (num > 0) {
+        console.log("number is " + num + " Positive");
+    } else {
+        console.log("number is " + num + " Nigetive");
+    }
+</script> -->
+
+
+<!--Q(3): Number is Buzz -->
+<!-- <script>
+    var num = parseInt(prompt("Enter the number and check Buzz number"));
+
+    if (num % 7 == 0 || num % 10 == 7) {
+        console.log(num + " Number is Buzz number");
+    } else {
+        console.log(num + " Number is Not Buzz number");
+    }
+</script> -->
+
+
+<!-- Q(4): Prime number -->
+<!-- <script>
+    var num = parseInt(prompt("Enter the number and check Prime number"));
+     var f = 0;
+    for(var i=2;i<=num/2;i++){
+        if(num%2==0){
+           f=1;
+            break;
+        }
+  }
+  if(f==0){
+    console.log("This number is Prime " +num);
+  }else{
+    console.log("This number is not Prime " +num);
+  }
+
+</script> -->
+
+
+<!-- Q(5): Factorial -->
+<!-- <script>
+    var num = parseInt(prompt("Enter the number and Find Factorial"));
+    var f = 1;
+    for (var i = 1; i <= num; i++) {
+        f = f * i;
+    }
+    console.log(num + " Factorial is :" + f);
+</script> -->
+
+
+<!-- Q(6): Factor -->
+<!-- <script>
+    var num = parseInt(prompt("Enter the number and Find Factor"));
+    console.log("Find Factor " + num);
+    for (var i = 1; i < num; i++) {
+        if (num % i == 0)
+            console.log(" :Factor is :" + i);
+    }
+
+</script>  -->
+
+
+<!-- Q(7): Special Number -->
+<script>
+    var num = parseInt(prompt("Enter the number and Find Special number"));
+    var r;
+    var mul;
+    var sum=0;
+    var t;
+     t = num;
+    while(num>0){
+      r = num % 10;
+      mul = 1;
+      for(var i=r;i>=1;i--){
+        mul = mul*i;
+        // console.log(mul);
+      }
+        sum = sum + mul;
+        console.log(num);
+        num = parseInt(num/10);
+    }
+    if(t==sum){
+        document.write("This is a Special number " +t);
+        console.log("This is a Special number " +t);
+    }else{
+        document.write("This is a not Special number " +t);
+        console.log("This is a Not Special number " +t);
+    }
+</script>
+
+<!-- Q(8): Perfect Number -->
+<!-- <script>
+  var num = parseInt(prompt("Enter the number and Find Perfect number"));
+  var sum=0;
+    console.log("Find Parfect " + num + " number");
+    for (var i = 1; i < num; i++) {
+        if (num % i == 0)
+       sum = sum +i;
+  }
+  if(sum==num){
+    console.log("Perfect number " +num);
+  }else{
+    console.log(" Not Perfect number " +num);
+  }
+</script> -->
+
+
+<!-- Q(9): Fibonacci Number -->
+<!-- <script>
+    var num = parseInt(prompt("Enter the number and Find Fibonacci number"));
+    var sum=0;
+     var a=1,b=1;
+     for(var i=1;i<=num;i++){
+
+        sum = a - b;
+        console.log(sum);
+        document.write(sum);
+        a = a + b;
+        b = b + sum;
+     }  
+  </script> -->
+
+<!-- Q(10): LCM -->
+
+<!-- <script>
+    var num1 = parseInt(prompt("Enter the first number"));
+    var num2 = parseInt(prompt("Enter the second number"));
+    
+    var max,lcm=1;
+    max = (num1>num2)? num1:num2;
+    var i = max;
+    while(i){
+
+        if(i%num1==0&&i%num2==0){
+            lcm = i;
+            break;
+        }
+        i +=max;
+    }
+    console.log("Total lcm is :" +lcm);
+  </script> -->
+
+
+<!-- Q(11): HCF -->
+<!-- <script>
+    var num1 = parseInt(prompt("Enter the First number "));
+    var num2 = parseInt(prompt("Enter the second number"));
+
+    var min, hcf = 1;
+    min = (num1 < num2) ? num1 : num2;
+    for (var i = 1; i <= min; i++) {
+        if (num1 % i == 0 && num2 % i == 0) {
+            hcf = i;
+        }
+    }
+    console.log("Total lcm is :" + hcf);
+</script> -->
+
+
+

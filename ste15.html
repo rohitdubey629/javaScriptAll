@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("A".charCodeAt());
+        console.log(String.fromCharCode(65));
+        
+        const str = "Xc1$3&59c6";
+        let sum = 0;
+        for(const c of str.split("")){
+              const ascii = c.charCodeAt();
+              if(ascii>=48 && ascii<=58){
+                sum=sum+(ascii-48);
+              }
+        }
+        console.log(sum);
+
+
+        const str1 = "Aazb&T1@z3C";
+        let u=0, l=0, d=0, s=0;
+
+        for(const c of str1.split("")){
+            const ascii = c.charCodeAt();
+            if(ascii>=48 && ascii<=58){
+                d++;
+            }
+            else if(ascii>=65 && ascii<=90){
+                u++;
+            }
+            else if(ascii>=97 && ascii<=122){
+                l++;
+            }
+            else{
+                s++;
+            }
+        }
+        console.log(`${"digit"} : ${d} ${"upper_case"} : ${u} ${"lower case"} : ${l} ${"symble"} : ${s}`);
+    </script>
+</body>
+</html>
