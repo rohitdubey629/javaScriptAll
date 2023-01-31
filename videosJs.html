@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos creat jss</title>
+    <script>
+        function start() {
+            var v = document.getElementById("my");
+            var b = document.getElementById("image");
+            if (v.paused) {
+
+                v.play();
+                b.src = "download.png";
+            }
+            else {
+                v.pause();
+                b.src = "download (1).png";
+            }
+
+        }
+        function makeBig() {
+            var v = document.getElementById("my");
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            v.width = w;
+            v.height = h;
+        }
+        function getInfo() {
+             var v=document.getElementById("my");
+             var info=document.getElementById("info");
+             info.innerHTML="Duration:"+v.duration+" sec";
+             info.innerHTML+="<br> Source:"+v.currentSrc;
+             if(v.paused)
+             info.innerHTML+="<br>Video Status:<font color=red>Paused</font>";
+             else
+             info.innerHTML+="<br>Curent Time:"+v.currentTime+" sec";
+             if(v.ended)
+             info.innerHTML+="<br>Video Status:<font color=green>Ended</font>";
+             else
+             info.innerHTML+="<br>Video Remaining:"+(v.duration-v.currentTime)+" src";
+               window.setTimeout("getInfo()",100);
+        }
+        function setVol(obj){
+            var video=document.getElementById("my");
+            video.volume=obj.value;
+            document.getElementById("x").innerHTML=(obj.value*100)+"%";
+        }
+
+        function nextVideo() {
+            var v = document.getElementById("my");
+            v.src="IMG_5640.MOV";
+            v.load();
+        }
+    </script>
+</head>
+
+<body onload="getInfo();">
+    <div id="info">
+
+    </div>
+    <center>
+        <video src="IMG_5638.MOV" id="my" height="300" width="500" controls>
+            Browser Can't Support Videos Pls Update Browser..
+        </video>
+        <div align="center">
+            <button onclick="start();"> <img src="Flat_tick_icon.svg.png" id="image" height="30" width="30"></button>
+            <button onclick="makeBig();">Make Big</button>
+            <button onclick="makeBig();">Get Info</button>
+            <input type="range" name="vol" max="1" min="0" step="0.1" onchange="setVol(this)" /><span id="x"></span>
+            <button onclick="nextVideo();">>></button>
+        </div>
+    </center>
+</body>
+
+</html>
