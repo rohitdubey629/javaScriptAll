@@ -1,0 +1,17 @@
+<script>
+   var randomnumber = Math.floor(Math.random()*100)+1;  
+   console.log(randomnumber);
+  var count = 0;
+    while(1){
+        var userInput = parseInt(prompt("Enter the number"));
+        count++;
+        if(randomnumber == userInput){
+           console.log("Yes you guese it right it was "+userInput+"  you guese it in "+count+" Time attempts Computer number is "+randomnumber);
+           break;
+        }else if(randomnumber>userInput){
+            console.log("You Guese to low number.."+userInput);
+        }else if(randomnumber<userInput){
+            console.log("You Guese to high number..."+userInput);
+        }
+    }
+</script>

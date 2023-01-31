@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <script>
+                  // check find only one value >18
+
+        var age = [10, 20, 12, 18];
+
+        document.write(age + "<br><br>");
+
+        var b = age.find(checkAdult);
+
+        document.write(b + "<br><br>");
+
+        function checkAdult(age) {
+
+            return age >= 18;
+        }
+
+            // check findeindex only one value index >18
+
+        var ages = [10, 20, 22, 18];
+
+        document.write(ages + "<br><br>");
+
+        var b = ages.findIndex(checkAdult);
+
+        document.write(b + "<br><br>");
+
+        function checkAdult(ages) {
+
+            return ages >= 18;
+        }
+
+    </script>
+</head>
+
+</html>

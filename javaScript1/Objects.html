@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <script>
+        var a = {
+            fname: 'rohit',
+            lname: 'dubey',
+            age: 23,
+            email: 'rohit@dubey.net',
+            favmovies: ['Dhoom', 'Sholay', 'Hum'],
+            living: {
+                'city': 'Prayagraj',
+                'country': 'India'
+            },
+            salary: function () {
+                return 25000;
+            },
+            fullname: function () {
+                return this.fname + " " + this.lname;
+            }
+        }
+
+ console.log(a);
+
+ document.write(a.fname+"<br>");
+ document.write(a.lname+"<br>");
+ document.write(a.age+"<br>");
+ document.write(a.email+"<br>");
+ document.write(a.favmovies+"<br>");
+ document.write(a.favmovies[2]+"<br>");
+ document.write(a.fullname()+"<br>");
+ document.write(a.salary()+"<br>");
+ document.write(a.living.city+"<br>");
+ document.write(a.living.country+"<br>");
+
+
+    </script>
+</head>
+
+</html>
