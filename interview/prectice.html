@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+<body>
+  <script>
+let runAgain = true;
+
+const canDrive = (age) => {
+  return age >= 18 ? true : false
+}
+
+while (runAgain) {
+  let age = prompt("Enter your age")
+  age = Number.parseInt(age)
+  if (age < 0) {
+    console.error("Please enter a valid age");
+    break;
+  }
+
+  if (canDrive(age)) {
+    alert("Yes you can drive")
+  }
+  else {
+    alert("You cannot drive")
+  }
+  runAgain = confirm("Do you want to play again?")
+}
+
+
+//function method   
+
+//  let sum = (num1 , num2) => {return c = num1 + num2; }
+ 
+
+// let sum = (num1 , num2) => {
+//   return c = num1 + num2; 
+// }
+
+
+let sum = function (num1 , num2) {
+  return c = num1 + num2; 
+}
+
+
+sum(10,20);
+console.log(c);
+
+</script>
+</body>
+</html>

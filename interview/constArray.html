@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        //  const a={sid:101};
+        //  if(!a.sid){
+        //     a.sid=102;
+        //  }else{
+        //    a.sname='rohit';
+        //  }
+        //  console.log(a);
+
+
+        //changeble constant value in object
+        // const x={sid:102};
+        //       x.sid=110;
+        //       console.log(x);
+
+
+             // not changeble value  use predifind method object.freeze(code);
+             // object.freeze method use then no mofifiy no delete no any key work
+        // const y=Object.freeze({sid:102});
+
+        //       y.sid=110;
+
+        //       console.log(y);
+
+
+
+        const a=Object.freeze({
+            sid:102,
+            sname:'rohit',
+            age:23,
+            obj:{
+                num:1
+            }
+        });
+        console.log(a);
+        a.obj.num=5;
+        console.log(a);
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosting</title>
+</head>
+
+<body>
+    <script>
+        // Case 1
+
+        function show() {
+            console.log("show " + a);  // 10
+        }
+        var a = 10;
+        show();
+
+        // Case 2 
+        function show2() {
+            console.log("show2 " + b);   //error undefined
+        }
+        show2();
+        var b = 100;
+
+        // Case 3
+        function show3() {
+            var c = 10;
+            console.log("show3 " + c); //10
+        }
+        show3();
+        var c = 100;
+
+
+        // Case 4 
+
+        function show4() {
+            if (true) {
+                var a = 10;
+                let d = 20;
+            }
+            console.log("show4 a " + a);  //10
+            console.log("show4 d " + d);  // not defined
+        }
+        show4();
+
+    </script>
+
+</body>
+
+</html>

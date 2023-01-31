@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = "abacbcdasjdjcn";
+        let dict = {};
+
+        for (let i = 0; i < str.length; i++) {
+            let char = str[i];
+            // console.log(char);
+            if (dict[char] == undefined) {
+                // console.log(char);
+                dict[char] = 1
+                // console.log(dict[char]);
+            } else {
+                dict[char]++
+            }
+        }
+        // console.log(dict);
+
+        var array = [3, 6, 2, 56, 32, 5, 89, 32, 9], largest;
+        // console.log(array.sort());
+        array.sort(function (a, b) {
+            console.log(a, b);
+            largest = a > b ? a : b;
+        });
+        console.log("ss " + largest);
+    </script>
+</body>
+
+</html>

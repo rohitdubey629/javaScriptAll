@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //    frequency of currector
+        //Q:-   const a = ['a','b','a','c','b','a','c'];
+        //A:-             {'a',3,'b',2,'c',2}
+        // const arr = ['a', 'b', 'a', 'c', 'b', 'a', 'c'];
+        // const f = {};
+        // for (let x of arr) {
+        //     if (f[x]) {
+        //         f[x] = f[x] + 1;
+        //     } else {
+        //         f[x] = 1;
+        //     }
+        // }
+        // console.log(f);
+        // var a = [10, 20, 30];
+        // var b = a;
+        // a[2] = 100;
+        // console.log("a is = " + a);
+        // console.log("b is = " + b);
+
+        let input = "abcdaskbsd";
+        let arrConvert = input.split('');
+        console.log(arrConvert);
+        let obj = {};
+        for (let arrIndex of arrConvert) {
+            if (obj[arrIndex]) {
+                obj[arrIndex] = obj[arrIndex] + 1;
+            } else {
+                obj[arrIndex] = 1;
+            }
+        }
+        console.log(obj);
+    </script>
+</body>
+
+</html>

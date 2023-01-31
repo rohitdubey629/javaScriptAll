@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = ["apple", "mango", "apple",
+            "orange", "mango", "mango"];
+        let arr1 = [1, 2, 3, 4,5, 2, 3, 4, 1, 6];
+        // function removeDuplicates(arr) {
+        //     return arr.filter((item, index) => arr.indexOf(item) === index);
+        // }
+        // console.log(removeDuplicates(arr1));
+
+        // let c = arr1.filter(3,);
+        // console.log(c);
+        let b = arr1.filter((item, index) => {
+            // console.log("item "+item);
+            // console.log("index "+index);
+            arr1.indexOf(item) === index
+        console.log("arr1 "+arr1.indexOf(item));
+        console.log("inde "+index);
+          }   
+        // console.log("item "+item);
+        //     console.log("index "+index);
+        );
+
+
+        console.log(b);
+
+        
+    // var arr = ["apple", "mango", "apple",
+    //         "orange", "mango", "mango"];
+      
+    // function removeDuplicates(arr) {
+    //     return [...new Set(arr)];
+    // }
+      
+    // console.log(removeDuplicates(arr));
+    </script>
+</body>
+
+</html>

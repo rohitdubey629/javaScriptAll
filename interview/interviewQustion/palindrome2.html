@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let string1 = 'jahaA3j54@';
+        // let len = string.length;
+        let string = string1.toLowerCase()
+        let len = string.length;
+        let tem = '';
+
+        for (let i = 0; i < len; i++) {
+            // console.log(string[i]);
+            // tem += string[i];
+
+            // console.log(string.charCodeAt(i));
+
+            if (string.charCodeAt(i) >= 48 && string.charCodeAt(i) <= 57) {
+                // console.log("It is a digit\n");
+                // tem = string[i];
+            } else if ((string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 90)) {
+                // console.log("It is an alphabet in Uppercase\n");
+                tem += string[i];
+            } else if ((string.charCodeAt(i) >= 97 && string.charCodeAt(i) <= 122)) {
+                // console.log("It is an alphabet in Lowercase\n");
+                tem += string[i];
+            } else {
+                console.log("It is Symbol");
+            }
+        }
+
+        console.log(tem);
+
+        const reverseString = tem.split('').reverse().join('');
+        if (tem == reverseString) {
+            console.log("is a palindrome");
+        } else {
+            console.log("is a not palindrome");
+        }
+
+        // var ch = 'Ab';
+        // var index = 1;
+
+        // var i = ch.charCodeAt(index);
+        // console.log(i);
+    </script>
+</body>
+
+</html>

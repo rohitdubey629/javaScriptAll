@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // missing number in aaray 
+        //case 1
+        let arr = [1, 2, 3, 5, 6];  //length of array in 5
+        //1+2+3+4+5+6=21;
+        //(5+1)*(5+2)/2=21 
+        // 20=21-1
+        // 18=20-2
+        // 15=18-3
+        // 10=15-5
+        // 4=10-6
+        // 4 is missing
+        let total = ((arr.length + 1) * (arr.length + 2)) / 2;
+        console.log(total);
+        for (let i = 0; i < arr.length; i++) {
+            total = total - arr[i];
+        }
+        console.log(total);
+
+        //case 2
+
+        let arr1 = [1, 2, 3, 4, 6, 7, 8, 9, 10];
+        let n = 10;
+        let total1 = n * (n + 1) / 2;
+        console.log(total1);
+        for (let i = 0; i < arr1.length; i++) {
+            total1 = total1 - arr1[i];
+        }
+        console.log(total1);
+    </script>
+</body>
+
+</html>
